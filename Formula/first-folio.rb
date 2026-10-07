@@ -4,27 +4,19 @@
 class FirstFolio < Formula
   desc "Format converter for stage plays — org, markdown, fountain, PDF"
   homepage "https://github.com/tigger-developer/first-folio"
-  url "https://github.com/tigger-developer/first-folio/archive/refs/tags/v0.4.9.tar.gz"
-  sha256 "d80f50a099796f141e5cdf66b24aae172113f2c6a3992499d28019b303ebf576"
+  url "https://github.com/tigger-developer/first-folio/archive/refs/tags/v0.4.14.tar.gz"
+  sha256 "23ed2756c86e2a60b02dd30a473c41dae287ab9a7b608aa938765ecd0d9fb6f4"
   license "MIT"
   head "https://github.com/tigger-developer/first-folio.git", branch: "master"
 
   depends_on "typst"
   depends_on "pandoc"
+  depends_on "go" => :build
 
   def install
-    # Install into libexec preserving the directory structure so
-    # FindBin resolves ../lib and ../presets correctly from bin/
-    (libexec/"bin").install "bin/folio"
-    libexec.install "lib"
-    libexec.install "presets"
-
-    # Wrapper script in bin/ that exec's the real one
-    (bin/"folio").write <<~SH
-      #!/bin/bash
-      exec "#{libexec}/bin/folio" "$@"
-    SH
-    (bin/"folio").chmod 0755
+    system "go", "build", "-trimpath",
+           "-ldflags", "-X github.com/tigger-developer/first-folio/internal/app.Version=#{version}",
+           "-o", bin/"folio", "./cmd/folio"
   end
 
   def caveats
