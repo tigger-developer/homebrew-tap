@@ -1,38 +1,33 @@
 # ABOUTME: Homebrew formula for First Folio.
-# ABOUTME: Copy this file to tadg-paul/homebrew-tap/Formula/ after tagging a release.
+# ABOUTME: Copy this file to tigger-developer/homebrew-tap/Formula/ after tagging a release.
 
 class FirstFolio < Formula
-  desc "Format converter for stage plays — org, markdown, fountain, PDF"
-  homepage "https://github.com/tadg-paul/first-folio"
-  url "https://github.com/tadg-paul/first-folio/archive/refs/tags/v0.4.7.tar.gz"
-  sha256 "357071170adb478b1458d323484a7d2a989136be16b0c6ac35493bbb1cbb1f59"
+  desc "Convert stage plays to Org, Markdown, Fountain, PDF, DOCX and ODT"
+  homepage "https://github.com/tigger-developer/first-folio"
+  url "https://github.com/tigger-developer/first-folio/archive/refs/tags/v0.4.16.tar.gz"
+  sha256 "e50633fbe8979a8f5c438c1caf4f9422cd72ab6cf140a0f45ca7d99e13b6c74e"
   license "MIT"
-  head "https://github.com/tadg-paul/first-folio.git", branch: "master"
+  head "https://github.com/tigger-developer/first-folio.git", branch: "master"
 
   depends_on "typst"
+  depends_on "pandoc"
+  depends_on "go" => :build
 
   def install
-    # Install into libexec preserving the directory structure so
-    # FindBin resolves ../lib and ../presets correctly from bin/
-    (libexec/"bin").install "bin/folio"
-    libexec.install "lib"
-    libexec.install "presets"
-
-    # Wrapper script in bin/ that exec's the real one
-    (bin/"folio").write <<~SH
-      #!/bin/bash
-      exec "#{libexec}/bin/folio" "$@"
-    SH
-    (bin/"folio").chmod 0755
+    system "go", "build", "-trimpath",
+           "-ldflags", "-X github.com/tigger-developer/first-folio/internal/app.Version=#{version}",
+           "-o", bin/"folio", "./cmd/folio"
   end
 
   def caveats
     <<~EOS
       First Folio converts stage plays between org-mode, Markdown,
-      Fountain, and PDF formats. PDF output requires Typst.
+      Fountain, and PDF formats, with editable DOCX and ODT export.
+      PDF output requires Typst. ODT output requires Pandoc.
 
       Try it:
         folio convert play.org play.pdf
+        folio convert play.org play.odt
         folio convert play.org --to md
         folio letter play.org
 
