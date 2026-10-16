@@ -2,10 +2,10 @@ cask "superscale-gui" do
   version "1.0.4"
   sha256 "4cc049b41093b533077bffa18f1089cd7d259ca9af43992122ace9bc7d118d05"
 
-  url "https://github.com/tigger04/superscale/releases/download/v1.0.4/Superscale.dmg"
+  url "https://github.com/tigger-developer/superscale/releases/download/v1.0.4/Superscale.dmg"
   name "Superscale"
   desc "AI image upscaling for Apple Silicon"
-  homepage "https://github.com/tigger04/superscale"
+  homepage "https://github.com/tigger-developer/superscale"
 
   depends_on macos: ">= :sonoma"
   depends_on arch: :arm64
@@ -21,8 +21,8 @@ cask "superscale-gui" do
     # If neither is installed, inform the user
     unless models_dir.children.any? { |c| c.extname == ".mlpackage" }
       ohai "Models not found. Install them with:"
-      ohai "  brew install tigger04/tap/superscale"
-      ohai "Or download manually — see https://github.com/tigger04/superscale#readme"
+      ohai "  brew install tigger-developer/tap/superscale"
+      ohai "Or download manually — see https://github.com/tigger-developer/superscale#readme"
     end
   end
 

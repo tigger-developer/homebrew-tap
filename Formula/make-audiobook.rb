@@ -1,13 +1,13 @@
 # ABOUTME: Homebrew formula for make-audiobook CLI tools.
-# ABOUTME: Copy this file to tigger04/homebrew-tap/Formula/ after tagging a release.
+# ABOUTME: Copy this file to tigger-developer/homebrew-tap/Formula/ after tagging a release.
 
 class MakeAudiobook < Formula
   desc "Convert documents to audiobooks using Piper or Kokoro TTS (CLI)"
-  homepage "https://github.com/tigger04/make-audiobook"
-  url "https://github.com/tigger04/make-audiobook/archive/refs/tags/v3.8.3.tar.gz"
+  homepage "https://github.com/tigger-developer/make-audiobook"
+  url "https://github.com/tigger-developer/make-audiobook/archive/refs/tags/v3.8.3.tar.gz"
   sha256 "8c45780b7049b01af3af6a3a29d39c52f763c79dc152cab555618fd5e0962f19"
   license "MIT"
-  head "https://github.com/tigger04/make-audiobook.git", branch: "master"
+  head "https://github.com/tigger-developer/make-audiobook.git", branch: "master"
 
   depends_on "bash" => "5.0"
   # Note: calibre is needed for .mobi support but must be installed separately as a cask:
@@ -47,7 +47,7 @@ class MakeAudiobook < Formula
         https://huggingface.co/rhasspy/piper-voices
 
       For the GUI version, install the cask instead:
-        brew install --cask tigger04/tap/make-audiobook
+        brew install --cask tigger-developer/tap/make-audiobook
     EOS
   end
 

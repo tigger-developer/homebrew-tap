@@ -5,10 +5,10 @@ cask "bg-clock" do
   version "0.1.0"
   sha256 :no_check
 
-  url "https://github.com/tigger04/bg-clock/releases/download/v#{version}/BGClock-#{version}.zip"
+  url "https://github.com/tigger-developer/bg-clock/releases/download/v#{version}/BGClock-#{version}.zip"
   name "bg-clock"
   desc "Analogue clock rendered on the macOS desktop background"
-  homepage "https://github.com/tigger04/bg-clock"
+  homepage "https://github.com/tigger-developer/bg-clock"
 
   depends_on macos: ">= :sonoma"
 

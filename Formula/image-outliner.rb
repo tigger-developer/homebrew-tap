@@ -1,7 +1,7 @@
 class ImageOutliner < Formula
   desc "Convert bitmap images to clean monochrome vector outlines"
-  homepage "https://github.com/tigger04/image-outliner"
-  url "https://github.com/tigger04/image-outliner/archive/refs/tags/v0.6.0.tar.gz"
+  homepage "https://github.com/tigger-developer/image-outliner"
+  url "https://github.com/tigger-developer/image-outliner/archive/refs/tags/v0.6.0.tar.gz"
   sha256 "540e95cc56838f32fc84034f2fff634a12f35687c1637d3953296266c0fedfdc"
   license "MIT"
 

@@ -1,13 +1,13 @@
 class RealEsrganPro < Formula
   desc "AI image and video upscaler — CLI wrapper around Real-ESRGAN"
-  homepage "https://github.com/tigger04/Real-ESRGAN"
-  url "https://github.com/tigger04/Real-ESRGAN/archive/refs/tags/v--dry-run.tar.gz"
-  sha256 "e0ea70866a96babcac94b03a8557b09522273e9971c22ecdfe0716996c857b72"
+  homepage "https://github.com/tigger-developer/Real-ESRGAN"
+  url "https://github.com/tigger-developer/Real-ESRGAN/archive/refs/tags/v0.5.0.tar.gz"
+  version "0.5.0"
+  sha256 "f169e0606f0771d567b3d330a2d291603df21d8540625d64ef842aa0a5acbf64"
   license "BSD-3-Clause"
-  version "--dry-run"
 
-  depends_on "python@3.12"
   depends_on "ffmpeg"
+  depends_on "python@3.12"
 
   def install
     venv = libexec/"venv"
@@ -44,6 +44,6 @@ class RealEsrganPro < Formula
 
   test do
     assert_match "usage", shell_output("#{bin}/upscale --help").downcase
-    assert_match "0.3.0", shell_output("#{bin}/upscale --version")
+    assert_match "0.5.0", shell_output("#{bin}/upscale --version")
   end
 end

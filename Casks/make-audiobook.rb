@@ -1,14 +1,14 @@
 # ABOUTME: Homebrew cask for make-audiobook GUI application.
-# ABOUTME: Copy this file to tigger04/homebrew-tap/Casks/ after building a release.
+# ABOUTME: Copy this file to tigger-developer/homebrew-tap/Casks/ after building a release.
 
 cask "make-audiobook" do
   version "2.1.0"
   sha256 "82d676c5be165f1bfbe9844d546b57b5b5d5d6c3832f0d3cff4d2fd2c502cc47"
 
-  url "https://github.com/tigger04/make-audiobook/releases/download/v#{version}/make-audiobook-#{version}.dmg"
+  url "https://github.com/tigger-developer/make-audiobook/releases/download/v#{version}/make-audiobook-#{version}.dmg"
   name "make-audiobook"
   desc "Convert documents to audiobooks using Piper TTS"
-  homepage "https://github.com/tigger04/make-audiobook"
+  homepage "https://github.com/tigger-developer/make-audiobook"
 
   # System dependencies installed via Homebrew
   depends_on formula: "ffmpeg"

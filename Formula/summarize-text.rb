@@ -1,7 +1,7 @@
 class SummarizeText < Formula
   desc "AI-powered text summarization tool for the command line"
-  homepage "https://github.com/tigger04/summarize-text"
-  url "https://github.com/tigger04/summarize-text/archive/refs/tags/v1.0.0.tar.gz"
+  homepage "https://github.com/tigger-developer/summarize-text"
+  url "https://github.com/tigger-developer/summarize-text/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "388324d52cc4842e093c4d4ad3b7618650cd3912edf713e48f6db11d6d8f4e2e"
   license "MIT"
 

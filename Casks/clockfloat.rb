@@ -4,10 +4,10 @@ cask "clockfloat" do
   version "1.0"
   sha256 "43920a3a4fa487b0764a6228306035a765dbf97be4474811695d29ed8472b917"
 
-  url "https://github.com/tigger04/clockfloat/releases/download/v#{version}/clockfloat-#{version}.zip"
+  url "https://github.com/tigger-developer/clockfloat/releases/download/v#{version}/clockfloat-#{version}.zip"
   name "clockfloat"
   desc "Floating digital clock for macOS"
-  homepage "https://github.com/tigger04/clockfloat"
+  homepage "https://github.com/tigger-developer/clockfloat"
 
   depends_on macos: ">= :ventura"
 

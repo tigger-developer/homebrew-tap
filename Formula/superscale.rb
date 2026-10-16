@@ -1,7 +1,7 @@
 class Superscale < Formula
   desc "AI image upscaling for Apple Silicon"
-  homepage "https://github.com/tigger04/superscale"
-  url "https://github.com/tigger04/superscale/archive/refs/tags/v1.0.7.tar.gz"
+  homepage "https://github.com/tigger-developer/superscale"
+  url "https://github.com/tigger-developer/superscale/archive/refs/tags/v1.0.7.tar.gz"
   sha256 "b0d2eac32202cf3485f2deaff9519a4bf1d848d0b8e73a8a4911a5e9f1ef33d9"
   license "Apache-2.0"
 
@@ -10,37 +10,37 @@ class Superscale < Formula
 
 
   resource "RealESRGAN_x4plus" do
-    url "https://github.com/tigger04/superscale/releases/download/models-v1/RealESRGAN_x4plus.mlpackage.zip"
+    url "https://github.com/tigger-developer/superscale/releases/download/models-v1/RealESRGAN_x4plus.mlpackage.zip"
     sha256 "66c6ce19ebf060378f0a9d6fc2a09b22f147a52893a576aa37b7991b551eaaf0"
   end
 
   resource "RealESRGAN_x2plus" do
-    url "https://github.com/tigger04/superscale/releases/download/models-v1/RealESRGAN_x2plus.mlpackage.zip"
+    url "https://github.com/tigger-developer/superscale/releases/download/models-v1/RealESRGAN_x2plus.mlpackage.zip"
     sha256 "a09453aa035be72abb9e6a84d283a5bad5fd148417017f279550c77c304fc7c2"
   end
 
   resource "RealESRNet_x4plus" do
-    url "https://github.com/tigger04/superscale/releases/download/models-v1/RealESRNet_x4plus.mlpackage.zip"
+    url "https://github.com/tigger-developer/superscale/releases/download/models-v1/RealESRNet_x4plus.mlpackage.zip"
     sha256 "c826dbe99cc47a6e46216660ada98e41c1bd7df65fd9c6df504dc34a3916ffcc"
   end
 
   resource "RealESRGAN_x4plus_anime_6B" do
-    url "https://github.com/tigger04/superscale/releases/download/models-v1/RealESRGAN_x4plus_anime_6B.mlpackage.zip"
+    url "https://github.com/tigger-developer/superscale/releases/download/models-v1/RealESRGAN_x4plus_anime_6B.mlpackage.zip"
     sha256 "2c6ed71bb38a2bc06c6ef93840d17c55a31ecbe8dfed8766959ac2a9be2ff020"
   end
 
   resource "realesr-animevideov3" do
-    url "https://github.com/tigger04/superscale/releases/download/models-v1/realesr-animevideov3.mlpackage.zip"
+    url "https://github.com/tigger-developer/superscale/releases/download/models-v1/realesr-animevideov3.mlpackage.zip"
     sha256 "98dfd469c3789a1ca1f33e01e307751205e987ed2d14b289b13bbfe9fb3dc1b1"
   end
 
   resource "realesr-general-x4v3" do
-    url "https://github.com/tigger04/superscale/releases/download/models-v1/realesr-general-x4v3.mlpackage.zip"
+    url "https://github.com/tigger-developer/superscale/releases/download/models-v1/realesr-general-x4v3.mlpackage.zip"
     sha256 "4d5ee58b2251a61ef6649f99e89f099fc6ae6fafc72df2cb63baaf83c7e93c61"
   end
 
   resource "realesr-general-wdn-x4v3" do
-    url "https://github.com/tigger04/superscale/releases/download/models-v1/realesr-general-wdn-x4v3.mlpackage.zip"
+    url "https://github.com/tigger-developer/superscale/releases/download/models-v1/realesr-general-wdn-x4v3.mlpackage.zip"
     sha256 "27c857d30fdc660c12ba553e21e83e3636fe3d60c793ac0466a77fdc4411eb26"
   end
 

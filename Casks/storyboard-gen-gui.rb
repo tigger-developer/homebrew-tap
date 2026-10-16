@@ -5,10 +5,10 @@ cask "storyboard-gen-gui" do
   version "0.72.0"
   sha256 "14d61a0968611c689a61522dab95e736321b9a17a08e37aa036c580c39cd3970"
 
-  url "https://github.com/tigger04/storyboard-gen/releases/download/v#{version}/storyboard-gen-gui-#{version}.dmg"
+  url "https://github.com/tigger-developer/storyboard-gen/releases/download/v#{version}/storyboard-gen-gui-#{version}.dmg"
   name "Storyboard Gen"
   desc "Generate video stills and clips from YAML storyboards using AI"
-  homepage "https://github.com/tigger04/storyboard-gen"
+  homepage "https://github.com/tigger-developer/storyboard-gen"
 
   depends_on macos: ">= :monterey"
 
@@ -24,9 +24,9 @@ cask "storyboard-gen-gui" do
 
     At least one AI provider is required. Configure credentials in a .env
     file in your project directory (Google, FAL.ai, or Replicate).
-    See: https://github.com/tigger04/storyboard-gen#quickstart
+    See: https://github.com/tigger-developer/storyboard-gen#quickstart
 
     The CLI tool is available separately:
-      brew install tigger04/tap/storyboard-gen
+      brew install tigger-developer/tap/storyboard-gen
   EOS
 end
